@@ -78,7 +78,6 @@ Common methods:
 - items() → Returns key‑value pairs as tuples
 - get(key, default) → Safe retrieval
 - pop(key) → Removes and returns value for specified key
-- update(dict2) → Merges another dictionary
 
 8) Removing Elements
 

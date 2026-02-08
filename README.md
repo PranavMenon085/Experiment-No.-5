@@ -14,102 +14,94 @@ THEORY
 
 1) Introduction to Dictionaries
 
-A dictionary is an ordered collection of key-value pairs in Python. Dictionaries are defined using curly braces {} with key:value syntax.
+A dictionary in Python is an ordered collection of key‑value pairs. Each key maps to a specific value, making dictionaries ideal for fast lookups and structured data storage. Dictionaries are defined using curly braces {} with the key:value syntax.
 
 Key Characteristics:
-
-• Ordered - Maintains insertion order (Python 3.7+)
-
-• Mutable - Keys and values can be modified after creation
-
-• Key-Value Pairs - Data stored as key:value associations
-
-• Unique Keys - Duplicate keys are not allowed; last value overwrites previous
+• Ordered – Since Python 3.7, dictionaries preserve insertion order.
+• Mutable – Keys and values can be modified after creation.
+• Key‑Value Pairs – Data stored as associations between keys and values.
+• Unique Keys – Duplicate keys are not allowed; the last value overwrites the previous one.
+• Keys must be immutable types (e.g., strings, numbers, tuples).
 
 Syntax:
-
 my_dict = {"key1": value1, "key2": value2, "key3": value3}
 OR
 my_dict = dict(key1=value1, key2=value2, key3=value3)
 
 2) Creating Dictionaries
 
-Dictionaries can be created using:
-- Curly braces with key:value pairs
-  
+Dictionaries can be created using curly braces with key:value pairs or the dict() constructor.
+
 Example:
 thisdict = {"brand": "Ford", "model": "Mustang", "year": 1964}
 
 3) Accessing Dictionary Values
 
-Values can be accessed using:
+Values are accessed using their keys:
 - Square bracket notation: dict[key]
 - get() method: dict.get(key, default_value)
 
 Example:
-thisdict["brand"]  # Returns "Ford"
-thisdict.get("brand")  # Returns "Ford"
+thisdict["brand"]        # Returns "Ford"
+thisdict.get("brand")    # Returns "Ford"
 
-The get() method is safer as it returns None or a default value if key doesn't exist, while square brackets raise KeyError.
+The get() method is safer because it returns None or a default value if the key does not exist, while square brackets raise a KeyError.
 
 4) Duplicate Keys Behavior
 
-Dictionaries do not allow duplicate keys. If a key is repeated during creation or assignment, the last value associated with that key will overwrite all previous values.
+Dictionaries do not allow duplicate keys. If a key is repeated, the last value overwrites earlier ones.
 
 Example:
 thisdict = {"year": 1964, "year": 2020}
-Result: {"year": 2020}  # First value (1964) is overwritten
+Result: {"year": 2020}
 
 5) Dictionary Length
 
-The len() function returns the number of key-value pairs in a dictionary.
+The len() function returns the number of key‑value pairs.
 
 Example:
-len(thisdict)  # Returns count of unique keys
+len(thisdict)   # Returns count of unique keys
 
 6) Adding and Modifying Elements
 
-New key-value pairs can be added or existing values can be modified using:
-- Square bracket assignment: dict[key] = value
+New key‑value pairs can be added or existing values modified using square bracket assignment.
 
-If key exists: value is updated
-If key doesn't exist: new key-value pair is added
+Example:
+dict["newkey"] = "newvalue"   # Adds new pair
+dict["year"] = 2025           # Updates existing value
 
 7) Dictionary Methods
 
 Common methods:
-- keys() - Returns all keys
-- values() - Returns all values  
-- items() - Returns key-value pairs as tuples
-- get(key, default) - Safe value retrieval
-- pop(key) - Removes and returns value for specified key
-- update(dict2) - Merges another dictionary
+- keys() → Returns all keys
+- values() → Returns all values
+- items() → Returns key‑value pairs as tuples
+- get(key, default) → Safe retrieval
+- pop(key) → Removes and returns value for specified key
+- update(dict2) → Merges another dictionary
 
 8) Removing Elements
 
-Methods for removal:
-- pop(key) - Removes specified key and returns its value; raises KeyError if key not found
-- popitem() - Removes and returns last inserted key-value pair
+Elements can be removed using:
+- pop(key) → Removes specified key and returns its value
+- popitem() → Removes and returns the last inserted key‑value pair
 
-student = {
-    "roll" : 101,
-    "name" : "Amit",
-    "Branch" : "ENTC",
-}
+Example:
+student = {"roll": 101, "name": "Amit", "Branch": "ENTC"}
 student.pop("Branch")
 
 9) Membership Testing
 
-The 'in' keyword checks if a key exists in dictionary:
-- "key" in dict - Returns True if key exists
-- "key" not in dict - Returns True if key doesn't exist
+The 'in' keyword checks if a key exists:
+- "key" in dict → True if key exists
+- "key" not in dict → True if key does not exist
 
 10) Dictionary Type
 
-The type() function returns <class 'dict'> for dictionary objects.
+The type() function confirms that dictionary objects belong to <class 'dict'>.
 
 Example:
-type(thisdict)  # Returns <class 'dict'>
+type(thisdict)   # Returns <class 'dict'>
 
 ALGORITHMS
 
